@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BookmarksManager;
+using System;
+using System.Collections.ObjectModel;
+using DataPersistence;
 
 namespace BookmarkDataProcessor
 {
@@ -8,21 +11,25 @@ namespace BookmarkDataProcessor
         {
             Console.WriteLine("Hello World!");
 
-            //TODO: Provide path input from command line (FIRST)
+            var path = ParseBookmarkPathFromInputArgs(args);
 
-            //TODO: Accept posted file via API (THIRD -- Grunt work)
+            //TODO: Accept posted file via API (THIRD -- busy work)
 
             var reader = new BookmarksManager.NetscapeBookmarksReader();
-
             var inputStream = new System.IO.FileStream(
-                path: @"/Users/ryanjackson/Google Drive/bookmarks_8_26_17.html",
+                path: path,
                 mode: System.IO.FileMode.Open
             );
-            var readerResult = reader.Read(inputStream);
+            BookmarksManager.BookmarkFolder readerResult = reader.Read(inputStream);
 
-            //TODO: Use 'DataPersistence', with a new service account, to sync data with Azure. (SECOND)
+            new DataPersistence.BookmarkStore().SaveDataForUser((Collection<IBookmarkItem>)readerResult, username: "ryjackson");
 
             Console.WriteLine("Goodbye world.");
+        }
+
+        private static string ParseBookmarkPathFromInputArgs(string[] args)
+        {
+            return @"/Users/ryanjackson/Google Drive/bookmarks_8_26_17.html"; //DEBUG/PoC
         }
     }
 }

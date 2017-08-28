@@ -1,7 +1,8 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "DataPersistence", "DataPersistence\DataPersistence.fsproj", "{6807C1D0-6840-4481-AB43-26346CA5C01B}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DataPersistence", "DataPersistence\DataPersistence.fsproj", "{6807C1D0-6840-4481-AB43-26346CA5C01B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookmarkDataProcessor", "BookmarkImporter\BookmarkDataProcessor.csproj", "{513D90FB-ABEB-4169-AD0C-0062FEDD5610}"
 EndProject
@@ -31,5 +32,11 @@ Global
 		{CA88C061-9ABB-4F6B-8679-7EB842E33D13}.Debug|x86.Build.0 = Debug|Any CPU
 		{CA88C061-9ABB-4F6B-8679-7EB842E33D13}.Release|x86.ActiveCfg = Release|Any CPU
 		{CA88C061-9ABB-4F6B-8679-7EB842E33D13}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6B460C4-33A6-4A56-BF0E-2DBE55BFCEA2}
 	EndGlobalSection
 EndGlobal
