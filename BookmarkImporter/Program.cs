@@ -2,6 +2,7 @@
 using System;
 using System.Collections.ObjectModel;
 using DataPersistence;
+using System.Linq;
 
 namespace BookmarkDataProcessor
 {
@@ -21,6 +22,7 @@ namespace BookmarkDataProcessor
                 mode: System.IO.FileMode.Open
             );
             BookmarksManager.BookmarkFolder readerResult = reader.Read(inputStream);
+            var exampleBookmarkType = readerResult.GetBookmarksBar().AllItems.First().GetType();
 
             new DataPersistence.BookmarkStore().SaveDataForUser((Collection<IBookmarkItem>)readerResult, username: "ryjackson");
 
