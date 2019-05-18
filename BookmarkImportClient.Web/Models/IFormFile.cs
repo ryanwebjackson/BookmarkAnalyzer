@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
 namespace BookmarkImportClient.Web.Models
@@ -13,6 +16,6 @@ namespace BookmarkImportClient.Web.Models
         string FileName { get; }
         Stream OpenReadStream();
         void CopyTo(Stream target);
-        Task CopyToAsync(Stream target, CancellationToken cancellationToken = null);
+        Task CopyToAsync(Stream target, CancellationToken cancellationToken);
     }
 }

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="BookmarkStore.fs" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BookmarksManager" Version="2.0.0" />
+    <PackageReference Include="FSharp.Core" Version="4.6.2" />
+    <PackageReference Include="SQLProvider" Version="1.1.63" />
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+</Project>

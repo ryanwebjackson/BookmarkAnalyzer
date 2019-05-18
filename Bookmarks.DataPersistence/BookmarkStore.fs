@@ -1,16 +1,21 @@
 ﻿namespace DataPersistence
 
+    open System.IO
     open System.Collections
     open System.Collections.Generic
     open System.Collections.ObjectModel
     open BookmarksManager // Third-party helper library
     open FSharp.Data.Sql
-    open FSharp.Configuration
+    // FSharp.Configuration - Wouldn't load with the correct .NET version - now .NET Core 2.2.
+    open System.Configuration
 
     module BookmarkStore =
         open System
 
-        type Settings = AppSettings<"app.config">
+        // Intention - Use the below lines to persist bookmark data to Azure,  
+        // or another data store (as opposed to in memory only).
+        let appSettings = System.Configuration.ConfigurationManager.ConnectionStrings
+        let connStrSettings = appSettings.Item("AzureBookmarkStore")
 
         let mutable private _bookmarkItems = new List<KeyValuePair<string, IBookmarkItem>>()
         // ^Consider using Concurrent classes for the above.

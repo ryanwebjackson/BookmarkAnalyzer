@@ -24,7 +24,8 @@ namespace BookmarkDataProcessor
             BookmarksManager.BookmarkFolder readerResult = reader.Read(inputStream);
             var exampleBookmarkType = readerResult.GetBookmarksBar().AllItems.First().GetType();
 
-            new DataPersistence.BookmarkStore().SaveDataForUser((Collection<IBookmarkItem>)readerResult, username: "ryjackson");
+            // "The type arguments for the method cannot be inferred from the usage..." CS0411
+            //BookmarkStore.SaveBookmarkItemsForUser(bookmarkItems: readerResult.ToList(), username: "ryjackson");
 
             Console.WriteLine("Goodbye world.");
         }
