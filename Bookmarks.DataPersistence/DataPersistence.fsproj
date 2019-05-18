@@ -8,6 +8,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="BookmarkStore.fs" />
     <None Include="app.config" />
+    <None Include="Scripts\CreateSchema_BookmarkDataStore.sql" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BookmarksManager" Version="2.0.0" />
@@ -17,5 +18,8 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
   </ItemGroup>
 </Project>
