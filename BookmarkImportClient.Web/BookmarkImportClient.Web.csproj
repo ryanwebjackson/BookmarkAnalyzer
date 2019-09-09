@@ -11,4 +11,7 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookmarkImport.DataProcessor\BookmarkDataProcessor.csproj" />
+  </ItemGroup>
 </Project>

@@ -16,12 +16,13 @@ namespace BookmarkImportClient.Web.Controllers
             return View();
         }
 
+        /*
         /// <remarks>Should likely delegate to other action method, and should call data API (BookmarkImportApi),  
         /// once input has been validated/normalized.</remarks>
         /// <returns>Home page for web UI as MVC View object.</returns>
         /// <param name="formFiles">Bookmark import/export files as model objects - likely only one (1) incoming.</param>
         [HttpPost]
-        public IActionResult Index(IEnumerable<IFormFile> formFiles)
+        public IActionResult Index(List<Microsoft.AspNetCore.Http.IFormFile> formFiles)
         {
             //TODO: Process Mozilla-style bookmark export/import files.
 
@@ -32,6 +33,7 @@ namespace BookmarkImportClient.Web.Controllers
 
             return View();
         }
+        */
 
         //TODO: Rename view and correlated action method to match display data.
         public IActionResult About()
