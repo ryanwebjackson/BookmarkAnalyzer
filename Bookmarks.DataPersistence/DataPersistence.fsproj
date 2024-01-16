@@ -15,7 +15,7 @@
     <PackageReference Include="FSharp.Core" Version="4.6.2" />
     <PackageReference Include="SQLProvider" Version="1.1.63" />
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
     <PackageReference Include="SQLite" Version="3.13.0" />
